@@ -20,8 +20,8 @@ Generally, in huge projects lot of changes are made to a single application on a
 
  - Download the .war file in <link>https://jenkins.io/download/</link>. Check for Generic Java package.
  - Place the downloaded file in your directory of choice and run the command from terminal/powershell/cmd:
-        cd /directory-of-your-choice
-        java -jar jenkins.war
+    * cd /directory-of-your-choice
+    * java -jar jenkins.war
     
     PS: Please note the admin password which will be displayed in powershell
  - Open localhost:8080 in your favourite browser and paste the password. Further, install the plugins of your    choice. 
