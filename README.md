@@ -13,16 +13,28 @@ Jenkins is a continuos integration and continuos deployment application, which h
 Generally, in huge projects lot of changes are made to a single application on a single day. To track the progress as well as running of the system in a consistent way we need an automated tool that tracks any changes to code at any instance of time. It automates the testing and deployment that makes it easy to track any inconsistencies in the code. 
     Takes the latest code and trigger a build and any post build actions will notify the user about the state of the new code.
 
-# Prerequisite:
-    - Java 7 or above
+### Prerequisite:
+    - Java 7 or above in the system.
+    - Tomcat 5 or above.
+    - System Variables with
+        * <strong>JAVA_HOME:</strong> C:\Program Files\Java\jdk<version>
+        * <strong>JRE_HOME:</strong> C:\Program Files\Java\jre<version>
 
 ## Installing and running Jenkins through a war file
 
  - Download the .war file in <link>https://jenkins.io/download/</link>. Check for Generic Java package.
  - Place the downloaded file in your directory of choice and run the command from terminal/powershell/cmd:
-    * cd /directory-of-your-choice
+    * cd <strong>/directory/of/your/choice</strong>
     * java -jar jenkins.war
     
     PS: Please note the admin password which will be displayed in powershell
  - Open localhost:8080 in your favourite browser and paste the password. Further, install the plugins of your    choice. 
- - 
+ - Copy the <strong>jenkins.war</strong> file from <strong>/directory/of/your/choice</strong> and place it in <strong>/directory/to/tomcat/webapps</strong>
+ 
+
+ #### Jenkins on Tomcat
+    
+    - Starting all applications can run in a single server if we can deploy Jenkins in conventional server like Tomcat.
+    - Run the tomcat by <strong>/directory/to/tomcat/bin</strong> and run the command:
+        * <strong>./startup.bat</strong> for starting the server
+        * <strong>./shutdown.bat</strong> for stopping the server
