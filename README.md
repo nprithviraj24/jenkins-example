@@ -3,10 +3,10 @@
 ### Different phases of Jenkins
 
 Jenkins is a continuos integration and continuos deployment application, which have different phases
-    - Changes to an existing application (exe, website, app).
-    - Building Artifacts
-    - Post build steps are triggered which are usually automated
-    - Report about latest changes are sent back to developing team.
+   - Changes to an existing application (exe, website, app).
+   - Building Artifacts
+   - Post build steps are triggered which are usually automated
+   - Report about latest changes are sent back to developing team.
 
 ### The problem CI and CD tools solve
 
@@ -28,7 +28,7 @@ Generally, in huge projects lot of changes are made to a single application on a
     * cd <strong>/directory/of/your/choice</strong>
     * java -jar jenkins.war
     * Ctrl+C to stop the server.
-    
+
     PS: Please note the admin password which will be displayed in powershell
  - Open localhost:8080 in your favourite browser and paste the password. Further, install the plugins of your    choice. 
  - Copy the <strong>jenkins.war</strong> file from <strong>/directory/of/your/choice</strong> and place it in <strong>/directory/to/tomcat/webapps</strong>
@@ -47,6 +47,7 @@ Generally, in huge projects lot of changes are made to a single application on a
 #### Changing the HOME directory of Jenkins
 - Goto Users/<system-user>
 - Search for <strong>.jenkins</strong>
+- Set <strong>JENKINS_HOME</strong> Path in System Variables withe path to the <strong>/directory/of/your/choice</strong>
 - Reasons:
     * Jenkins Home Directory contains:
         1. All configurations
@@ -56,3 +57,21 @@ Generally, in huge projects lot of changes are made to a single application on a
     * Why:
         - Scalability of project might force us to move jenkins home dir to a location that has enough disk space. 
         - Project requirements.
+- <strong>localhost:8080/restart</strong> if the port is 8080.
+
+#### Moving to Command Line Interface 
+- Consumes less memory than UI.
+- CI is much easier this way.
+- Steps:
+    * Manage Jenkins in localhost:8080 after starting the port.
+    * <strong>http:/localhost:8080/cli</strong> and download <strong>jenkins-cli.jar</strong> file.
+    * Run the following command in that directory where we have the jenkins-cli.jar 
+        - java -jar jenkins-cli.jar -s http://localhost:8080/ -auth user:password
+
+
+### Roles (Creating, Managing and Assigning)
+- <strong>http:/localhost:8080</strong> -> Manage Jenkins -> Manage Users -> Create User
+- Configure a user by following the link: http://localhost:8080/user/username/configure
+- Create and manage user roles Roles Strategy Plugin - download - restart jenkins
+- Manage Jenkins - Configure Global Security - Authorisation - Role Based Strategy
+- Create Roles and Assign roles to users by the same plugin
