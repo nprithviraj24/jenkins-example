@@ -14,11 +14,12 @@ Generally, in huge projects lot of changes are made to a single application on a
     Takes the latest code and trigger a build and any post build actions will notify the user about the state of the new code.
 
 ### Prerequisite:
-    - Java 7 or above in the system.
-    - Tomcat 5 or above.
-    - System Variables with
-        * <strong>JAVA_HOME:</strong> C:\Program Files\Java\jdk<version>
-        * <strong>JRE_HOME:</strong> C:\Program Files\Java\jre<version>
+
+- Java 7 or above in the system.
+- Tomcat 5 or above.
+- System Variables with
+    * <strong>JAVA_HOME:</strong> C:\Program Files\Java\jdk<version>
+    * <strong>JRE_HOME:</strong> C:\Program Files\Java\jre<version>
 
 ## Installing and running Jenkins through a war file
 
@@ -26,15 +27,32 @@ Generally, in huge projects lot of changes are made to a single application on a
  - Place the downloaded file in your directory of choice and run the command from terminal/powershell/cmd:
     * cd <strong>/directory/of/your/choice</strong>
     * java -jar jenkins.war
+    * Ctrl+C to stop the server.
     
     PS: Please note the admin password which will be displayed in powershell
  - Open localhost:8080 in your favourite browser and paste the password. Further, install the plugins of your    choice. 
  - Copy the <strong>jenkins.war</strong> file from <strong>/directory/of/your/choice</strong> and place it in <strong>/directory/to/tomcat/webapps</strong>
- 
+ - Run the Tomcat server and then check: localhost:8080/jenkins (only if you haven't changed the Tomcat portnumber)
+ - For running standalone jenkins on custom port:
+    * <strong>cd /directory/of/your/choice</strong> 
+    * And then run <strong>java -jar jenkins.war --httpPort=9090</strong>. Since by default Tomcat and Jenkins run on 8080 port.
 
  #### Jenkins on Tomcat
-    
-    - Starting all applications can run in a single server if we can deploy Jenkins in conventional server like Tomcat.
-    - Run the tomcat by <strong>/directory/to/tomcat/bin</strong> and run the command:
+
+- Starting all applications can run in a single server if we can deploy Jenkins in conventional server like Tomcat.
+- Run the tomcat by <strong>/directory/to/tomcat/bin</strong> and run the command:
         * <strong>./startup.bat</strong> for starting the server
         * <strong>./shutdown.bat</strong> for stopping the server
+
+#### Changing the HOME directory of Jenkins
+- Goto Users/<system-user>
+- Search for <strong>.jenkins</strong>
+- Reasons:
+    * Jenkins Home Directory contains:
+        1. All configurations
+        2. Plugins
+        3. Jobs details
+        4. Logs
+    * Why:
+        - Scalability of project might force us to move jenkins home dir to a location that has enough disk space. 
+        - Project requirements.
