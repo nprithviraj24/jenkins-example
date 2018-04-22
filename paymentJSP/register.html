@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<title> amazon registration</title>
+<style>
+body{ 
+text-align:center;
+margin-top:10px;
+text-align:center;
+}
+table{
+border-style:solid;
+ 
+text-align:center;
+padding:20px;
+height:200px;
+}
+input[type=button] {
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: orange;
+    color: black;
+	border-radius:5px;
+	cursor:pointer;
+}
+input[type=text]{
+border-radius:5px;
+}
+form {
+    display: inline-block;
+    text-align: center;
+    }
+	
+</style>
+
+</head>
+<body>
+<!-- <a href="https://www.amazon.com/ref=ap_frn_logo" ><img src="C:\Users\Dell\Desktop\HTML\amazon logo.png" alt="amazon"></a> -->
+<br>
+<p id="error"> </p>
+<form action="registration.jsp" name="sample" method="post">
+<p id="error"> </p>
+<fieldset>
+<p align=left>Your name:<br/>
+<input type="text" name="uname" size="30" height="50"> <br/><br>
+Email<br/>
+<input type="text" name="em" size="30"><br/><br>
+Email again<br/>
+<input type="text" name="emagn" size="30"><br/><br>
+Password<br/>
+<input type="password" name="pwd" size="30"><br/><br>
+Password again<br/>
+<input type="password" name="pwdagn" size="30"><br/><br>
+
+<input type="submit" value="Create your Amazon account" bgcolor="orange" onClick="return val()"><br/></a>
+
+<p align="left" style="font-family:Sans-Serif">By creating an account, you agree to Amazon.com's<br/>
+<a href="terms and condition.html">Conditions of Use</a>
+and<a href="privacynotice.html"> Privacy Notice</a>
+</p>
+</fieldset>
+
+<script>
+
+function val()
+{
+var name= document.sample.uname.value;
+var em= document.sample.em.value;
+var emagn= document.sample.emagn.value;
+var pwd= document.sample.pwd.value;
+var pwdagn= document.sample.pwdagn.value;
+
+
+if(name=="")
+{
+document.getElementById("error").innerHTML="Enter your name";
+return false;
+}
+else if(em==""||emagn=="")
+{
+document.getElementById("error").innerHTML="Enter your email<br> Email and Emailagain should be same";
+return false;
+}
+else if(pwd=="")
+{
+document.getElementById("error").innerHTML="Enter ur password";
+return false;
+}
+}
+}
+
+
+</script>
+</form>
+</body>
+</html>
+

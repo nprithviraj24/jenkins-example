@@ -75,3 +75,16 @@ Generally, in huge projects lot of changes are made to a single application on a
 - Create and manage user roles Roles Strategy Plugin - download - restart jenkins
 - Manage Jenkins - Configure Global Security - Authorisation - Role Based Strategy
 - Create Roles and Assign roles to users by the same plugin
+
+## Setting up the basic configurations
+- <h5>Number of Parallel Jobs</h5>  
+    * Setting up the number of parallel jobs executed in <strong>server-ip/config</strong>, Section <strong># of executors</strong>
+- <h5>Managing Nodes</h5>
+    * Add a new node by finding the Manage Nodes section in configure
+    * Add label so that we can map to the correct node in the given job description. 
+    * While creating a job, check <i>Restrict where the project can be run</i> and give the appropriate label of the node in <i>Label Expression</i> under that.
+- <h5>Additional Changes</h5>  
+    * Quite Period is used to sleep the job for certain seconds. It's used to prevent the job getting executed as soons and it is triggered to execute.
+    * We can configure the type of name we want by <h5>Setting up the pattern</h5> in Configure/Naming Strategy section.
+
+## Jobs

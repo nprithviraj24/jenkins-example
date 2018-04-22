@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<title> payment</title>
+<style>
+body{ 
+text-align:center;
+margin-top:10px;
+text-align:center;
+}
+table{
+border-style:solid; 
+text-align:center;
+padding:20px;
+height:200px;
+}
+input[type=button] {
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: orange;
+    color: black;
+	border-radius:5px;
+	cursor:pointer;
+}
+input[type=text]{
+border-radius:5px;
+}
+form {
+    display: inline-block;
+    text-align: center;
+    }
+	
+</style>
+
+</head>
+<body>
+<!-- <a href="https://www.amazon.com/ref=ap_frn_logo" ><img src="C:\Users\Dell\Desktop\HTML\amazon logo.png" alt="amazon"></a> -->
+<br>
+<p id="error"> </p>
+
+<form action="payment.jsp" name="form" method="post">
+<p id="error"> </p>
+<fieldset>
+<p align=left>Your name:<br/>
+<input type="text" name="uname" size="30" height="50"> <br/><br>
+enter amount:<br/>
+<input type="text" name="amt" size="30"><br/><br>
+card number<br/>
+<input type="text" name="cn" size="30"><br/><br>
+cvv<br/>
+<input type="text" name="cvv" size="30"><br/><br>
+pin<br/>
+<input type="password" name="pin" size="30"><br/><br>
+re-pin<br/>
+<input type="password" name="rpin" size="30"><br/><br>
+
+<input type="submit" value="submit card details"  onClick="return val()"><br/></a>
+
+<p align="left" style="font-family:Sans-Serif">By submitting, you agree to <br/>
+<a href="terms and condition.html">Conditions of Use</a>
+and<a href="privacynotice.html"> Privacy Notice</a>
+</p>
+</fieldset>
+
+<script>
+
+function val()
+{
+var name= document.form.uname.value;
+var cn= document.form.cn.value;
+var cvv= document.form.cvv.value;
+var pin= document.form.pin.value;
+var rpin= document.form.rpin.value;
+
+
+if(name=="")
+{
+document.getElementById("error").innerHTML="Enter your name";
+return false;
+}
+else if(cn==""||cvv=="")
+{
+document.getElementById("error").innerHTML="Enter your card no.<br> card number and cvv are compulsory";
+return false;
+}
+else if(pin=="")
+{
+document.getElementById("error").innerHTML="Enter your pin";
+return false;
+}
+}
+}
+
+
+</script>
+</form>
+</body>
+</html>
+
