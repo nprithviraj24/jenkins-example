@@ -12,13 +12,13 @@ public class AppTest {
 	private WebDriver driver;
 	
 	@Before
-	public void scratch() {
+	public void testSetUp() {
 		System.setProperty("webdriver.com.driver", "chromedriver.exe");
 		driver = new ChromeDriver();
 	}
 	
 	@After
-	public void toDo() {
+	public void tearDown() {
 		driver.quit();
 	}
 	
@@ -31,7 +31,7 @@ public class AppTest {
 	
 }
 
-
+//
 //package com.sdqiteam.something;
 //
 //import junit.framework.Test;
