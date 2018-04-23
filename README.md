@@ -16,10 +16,12 @@ Generally, in huge projects lot of changes are made to a single application on a
 ### Prerequisite:
 
 - Java 7 or above in the system.
-- Tomcat 5 or above.
 - System Variables with
-    * <strong>JAVA_HOME:</strong> C:\Program Files\Java\jdk<version>
-    * <strong>JRE_HOME:</strong> C:\Program Files\Java\jre<version>
+    * <strong>JAVA_HOME:</strong> C:\Program Files\Java\jdk-version
+    * <strong>JRE_HOME:</strong> C:\Program Files\Java\jre-version
+- Tomcat 5 or above.
+- MAVEN with M2_HOME and MAVEN path set in environmental variables.
+- Cut+Paste the <strong>PaymentJSP</strong> folder to WEB-INF in Tomcat folder.  
 
 ## Installing and running Jenkins through a war file
 
