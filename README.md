@@ -84,7 +84,44 @@ Generally, in huge projects lot of changes are made to a single application on a
     * Add label so that we can map to the correct node in the given job description. 
     * While creating a job, check <i>Restrict where the project can be run</i> and give the appropriate label of the node in <i>Label Expression</i> under that.
 - <h5>Additional Changes</h5>  
-    * Quite Period is used to sleep the job for certain seconds. It's used to prevent the job getting executed as soons and it is triggered to execute.
-    * We can configure the type of name we want by <h5>Setting up the pattern</h5> in Configure/Naming Strategy section.
+    * Quite Period is used to sleep the job for certain seconds. It's used to prevent the job getting executed as soons and it is triggered to execute. <br/>
+    * We can configure the type of name we want by <strong>Setting up the pattern</strong> in <strong>Configure/Naming Strategy</strong> section.
 
 ## Jobs
+
+- Creating Jobs 
+    * Jenkins Main page: <strong>localhost:8080</strong>
+    * New Item 
+    * Add Details
+- Triggering a Job Remotely
+    * In Build actions: We can modify based on how we want to execute our test cases.
+    * 
+
+## Automated Deployment 
+- Build -> Deploy -> Test -> Release
+- In Continuous Integrated System all the jobs are dependent on status of previous task, i.e. Suppose if we want to Deploy the project, System must successfully Build the project.
+
+#### The Process
+-  Changes to the code are modified and then committed to a central repository.
+- Changes to central code triggers different testing jobs in:
+    * <strong>Functional Test Environment:</strong> Consists of all functional tests.
+    * <strong>Performance Test Environment:</strong> Consists of all non-functional tests.
+- Based on results of these tests, we deploy the project.
+
+
+## Selenium Testing
+
+- Writing Selenium Test
+    * Download Chrome Driver and save it in ROOT directory of the project.  
+    * Selenium Dependency in POM.xml
+    * Writing a basic test to traverse different websites
+    * Running in Jenkins 
+
+- Writing a Cucumber Selenium Test 
+    * Download Cucumber Plugin
+    * Cucumber Dependency in POM.xml
+    * Writing a basic feature file.
+    * Writing a step definitions
+    * Run in Jenkins
+
+    
