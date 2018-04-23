@@ -34,7 +34,6 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-<<<<<<< HEAD
     <!-- https://mvnrepository.com/artifact/junit/junit -->
 <dependency>
     <groupId>junit</groupId>
@@ -48,20 +47,28 @@
       <version>6.9.8</version>
       <scope>test</scope>
     </dependency>
-    
-=======
+    <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
+<dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>1.2.5</version>
+    <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+<dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>1.2.5</version>
+</dependency>
 
->>>>>>> a1991176348a5f608a8416b9e808f91942db510e
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
     <version>3.11.0</version>
 </dependency>
-<<<<<<< HEAD
     
     
-=======
 
 <!-- https://mvnrepository.com/artifact/junit/junit -->
 <dependency>
@@ -71,7 +78,6 @@
     <scope>test</scope>
 </dependency>
 
->>>>>>> a1991176348a5f608a8416b9e808f91942db510e
   </dependencies>
   
 </project>
